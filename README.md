@@ -4,6 +4,10 @@ A modern, responsive web application built with Next.js and Chakra UI that provi
 
 ## Features
 
+
+![image](https://github.com/user-attachments/assets/714f9e0a-64d2-4d44-a2f1-9fac22426cdc)
+
+
 - 🌓 Dark/Light theme support
 - 🔍 Real-time search functionality
 - 📱 Fully responsive design
