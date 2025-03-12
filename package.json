@@ -1,30 +1,23 @@
 {
-  "name": "resource-hub",
+  "name": "works-for-me",
   "version": "1.0.0",
-  "description": "Interactive FAQ system and resource hub with dark mode support",
+  "private": true,
+  "workspaces": [
+    "web-app",
+    "web-cms"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@chakra-ui/icons": "^2.1.1",
-    "@chakra-ui/react": "^2.8.1",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@heroicons/react": "^2.0.18",
-    "framer-motion": "^10.16.4",
-    "next": "^13.5.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "dev": "concurrently \"npm run dev:app\" \"npm run dev:cms\"",
+    "dev:app": "cd web-app && npm run dev",
+    "dev:cms": "cd web-cms && npm run develop",
+    "build": "npm run build:app && npm run build:cms",
+    "build:app": "cd web-app && npm run build",
+    "build:cms": "cd web-cms && npm run build",
+    "start": "concurrently \"npm run start:app\" \"npm run start:cms\"",
+    "start:app": "cd web-app && npm run start",
+    "start:cms": "cd web-cms && npm run start"
   },
   "devDependencies": {
-    "@types/node": "^20.8.2",
-    "@types/react": "^18.2.24",
-    "@types/react-dom": "^18.2.8",
-    "eslint": "^8.50.0",
-    "eslint-config-next": "^13.5.4",
-    "typescript": "^5.2.2"
+    "concurrently": "^8.2.2"
   }
 } 

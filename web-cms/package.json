@@ -1,0 +1,29 @@
+{
+  "name": "web-cms",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Strapi CMS for FAQ Portal",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/strapi": "4.20.3",
+    "@strapi/plugin-users-permissions": "4.20.3",
+    "@strapi/plugin-i18n": "4.20.3",
+    "better-sqlite3": "8.6.0"
+  },
+  "author": {
+    "name": "Nemu-x"
+  },
+  "strapi": {
+    "uuid": "works-for-me-strapi-cms"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

@@ -1,125 +1,78 @@
-# Interactive FAQ and Resource Hub
+# Works For Me - FAQ Portal
 
-A modern, responsive web application built with Next.js and Chakra UI that provides an interactive FAQ system and resource hub. This project features a dark/light theme, searchable content, and categorized information display.
-
-## Features
-
-
-![image](https://github.com/user-attachments/assets/714f9e0a-64d2-4d44-a2f1-9fac22426cdc)
-
-
-- 🌓 Dark/Light theme support
-- 🔍 Real-time search functionality
-- 📱 Fully responsive design
-- 🏷️ Category-based filtering
-- 📚 Comprehensive FAQ system
-- 🎥 Support for video and document guides
-- 🔗 External resource linking
-- ⚡ Fast and smooth animations
-
-## Tech Stack
-
-- Next.js
-- React
-- Chakra UI
-- TypeScript
-- Heroicons
+A modern FAQ portal built with Next.js and Strapi CMS, designed to help teams manage and share knowledge effectively.
 
 ## Project Structure
 
-```
-.
-├── components/
-│   └── FAQSection.tsx       # Main FAQ and resource hub component
-├── pages/
-│   └── index.tsx           # Main application page
-├── public/
-│   ├── videos/            # Video guides
-│   └── docs/             # PDF documentation
-└── theme.ts              # Custom theme configuration
-```
+The project consists of two main parts:
+
+- `web-app`: Next.js frontend application
+- `web-cms`: Strapi CMS backend
+
+## Prerequisites
+
+- Node.js 18 or higher
+- npm 8 or higher
+- PostgreSQL (for Strapi CMS)
 
 ## Getting Started
 
 1. Clone the repository:
+<<<<<<< HEAD
 ```bash
 git clone https://github.com/Nemu-x/works-for-me-strapi.git
 ```
+=======
+   ```bash
+   git clone https://github.com/Nemu-x/works-for-me-strapi.git
+   cd works-for-me-strapi
+   ```
+>>>>>>> bed39be (feat: setup monorepo structure with web-app and web-cms)
 
 2. Install dependencies:
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
-3. Run the development server:
-```bash
-npm run dev
-```
+3. Set up environment variables:
+   - Copy `.env.example` to `.env` in both `web-app` and `web-cms` directories
+   - Update the variables according to your environment
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Start development servers:
+   ```bash
+   npm run dev
+   ```
+   This will start both the Next.js app (http://localhost:3000) and Strapi CMS (http://localhost:1337)
 
-## Configuration
+## Development
 
-### Adding New FAQs
+- Frontend (web-app): http://localhost:3000
+- Strapi Admin: http://localhost:1337/admin
 
-Add new FAQ items to the `faqData` array in `components/FAQSection.tsx`:
+### Available Scripts
 
-```typescript
-const faqData = [
-  {
-    question: "Your question here?",
-    answer: "Your answer here",
-    links: [
-      { text: "Link Text", url: "https://example.com" }
-    ],
-    instructions: [
-      {
-        title: "Guide Title",
-        videoUrl: "/videos/guide-video.mp4",
-        documentUrl: "/docs/guide-doc.pdf"
-      }
-    ]
-  }
-];
-```
+- `npm run dev` - Start both frontend and CMS in development mode
+- `npm run build` - Build both applications for production
+- `npm run start` - Start both applications in production mode
 
-### Adding New Categories
+### Individual Commands
 
-Add new categories to the `faqCategories` array:
+Frontend (web-app):
+- `npm run dev:app` - Start frontend in development mode
+- `npm run build:app` - Build frontend for production
+- `npm run start:app` - Start frontend in production mode
 
-```typescript
-const faqCategories = [
-  {
-    id: 'category-id',
-    icon: '🔍',
-    label: 'Category Name',
-    keywords: ['keyword1', 'keyword2']
-  }
-];
-```
-
-## Customization
-
-### Theme
-
-Modify `theme.ts` to customize colors, fonts, and component styles:
-
-```typescript
-const theme = extendTheme({
-  config: {
-    initialColorMode: 'light',
-    useSystemColorMode: true,
-  },
-  // Add your custom theme options here
-});
-```
+CMS (web-cms):
+- `npm run dev:cms` - Start Strapi in development mode
+- `npm run build:cms` - Build Strapi for production
+- `npm run start:cms` - Start Strapi in production mode
 
 ## Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
 ## License
