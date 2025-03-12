@@ -2,6 +2,9 @@
 
 A modern FAQ portal built with Next.js and Strapi CMS, designed to help teams manage and share knowledge effectively.
 
+![421101180-714f9e0a-64d2-4d44-a2f1-9fac22426cdc](https://github.com/user-attachments/assets/6389cdf6-eff0-40ef-a84b-57dad28cd609)
+
+
 ## Project Structure
 
 The project consists of two main parts:
